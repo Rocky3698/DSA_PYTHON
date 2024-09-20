@@ -1,0 +1,41 @@
+🚀 Today, I dove into the concept of Recursion—a technique where a function calls itself to solve smaller instances of the same problem. Here are some key takeaways:
+
+Key Points about Recursion:
+
+    - Recursion allows performing the same operation multiple times with different inputs.
+    - At each step, we simplify the problem by using smaller inputs.
+    - A base condition is essential to prevent an infinite loop and ensure the recursion stops.
+
+When to Choose Recursion:
+    - When the problem can be broken down into smaller, similar subproblems (e.g., trees, graphs).
+
+When to Avoid Recursion:
+    - If time and space complexity are critical. Recursion involves maintaining a call stack, which can lead to higher memory and processing costs.
+
+Common Use Cases:
+    - Data structures like Trees and Graphs.
+    - Algorithms involving divide and conquer, greedy approaches, and dynamic programming (DP).
+
+3-Step Approach to Recursion:
+Let’s consider finding the factorial of a number as an example:
+
+Step 1: Recursive Case – The Flow
+    The factorial of a number can be expressed as: n! = n * (n-1)!
+    For each n, we need to find the factorial of n-1.
+
+Step 2: Base Case – The Stopping Condition
+    We know that 0! = 1 and 1! = 1, which stops the recursion.
+
+Step 3: Unintentional Case – Constraints
+    Ensure n is a positive integer to prevent crashes like RecursionError or StackOverflow.
+
+Final Code Example:
+
+def factorial(n):
+   assert n >= 0 and int(n) == n, 'The number must be a positive integer only'
+   if n in [0, 1]:
+       return 1
+   else:
+       return n * factorial(n-1)
+
+Pro Tip: Using the assert keyword helps verify conditions, ensuring your code behaves as expected before it proceeds further.
